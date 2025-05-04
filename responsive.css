@@ -1,0 +1,63 @@
+@media  (max-width: 600px) {
+    input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .btn-back {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containner-all{
+        border: 1.5px solid #9E9E9E;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containner2{
+        border: 1.5px solid #9E9E9E;
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .newSi {
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn-back {
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn-next {
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    input#passwordInput{
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+    }
+}
+
+@media screen and (max-width) {
+    input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+    }
+}

